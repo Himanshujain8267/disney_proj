@@ -12,6 +12,8 @@ getMovieByGenereId() ;
 },[])
 
 
+// Make the movie list horizontal using flexbox
+// Add a container style for horizontal scrolling
 
     const getMovieByGenereId=()=>{
 GlobalApi.getMovieByGenereId(28).then(resp=>{
@@ -20,7 +22,7 @@ GlobalApi.getMovieByGenereId(28).then(resp=>{
 })
     }
   return (
-    <div>
+    <div className={"flex overflow-x-auto gap-4 py-2"} >
 {
 movielist.map((item,idx)=>(
 
