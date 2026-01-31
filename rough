@@ -5,21 +5,22 @@ import MovieCard from './MovieCard';
 function MovieList({genereId}) {
 
 const [movielist,setmovielist]= useState([]) ;
-useEffect(()=>{
+const getMovieByGenereId = () => {
+  if (genereId) {
+    GlobalApi.getMovieByGenereId(genereId).then(resp => {
+      console.log(resp);
+      setmovielist(resp.data.results);
+    });
+  }
+};
 
-getMovieByGenereId() ;
-
-},[genereId]) ;
-
-
+useEffect(() => {
+  getMovieByGenereId();
+}, [genereId]);
 
 
-    const getMovieByGenereId=()=>{
-GlobalApi.getMovieByGenereId(28).then(resp=>{
-   console.log(resp)
-   setmovielist(resp.data.results);
-})
-    }
+// Make the movie list horizontal using flexbox
+// Add a container style for horizontal scrolling
   return (
     <div className={"flex scrollbar-hide overflow-x-auto gap-4 py-2"} >
 {

@@ -13,13 +13,13 @@ function App() {
   return (
     <div>
 
- <div className="bg-[#201648] h-screen text-white">
+ <div className="bg-[#201648]  text-white">
   <Header/>
   <Slider/>
   <Filmhouses/>
   
       </div>
-      <div className="bg-[#201648] h-screen text-white">
+      <div className="bg-[#201648]  text-white">
 
 
 
