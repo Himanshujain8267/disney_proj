@@ -1,6 +1,6 @@
 # Disney Project
 
-A React-based application for exploring Disney content.
+A React-based application for exploring Movie content.
 
 ## Getting Started
 
